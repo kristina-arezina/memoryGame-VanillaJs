@@ -1,4 +1,6 @@
+//returns all elements in the document that matches a specified CSS selector in an array
 const cards = document.querySelectorAll('.memory-card');
+
 
 let hasFlippedCard = false;
 let lockBoard = false;

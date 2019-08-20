@@ -19,5 +19,6 @@ on a computer screen
 will wrap if necessary
 
 JS Notes:
-- let statments: declares a block scope local variable, optionally initializing it to a value
--block scope is the area within if, switch conditions or for and while loops
+- var: has function level scoping and can change the value reference
+- let: has block level scoping and can change the value reference
+- const: has block level scoping but cannot change the value reference
