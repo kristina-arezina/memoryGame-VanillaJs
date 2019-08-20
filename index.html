@@ -2,27 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Memory Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<section>
-<!--each card consists of container div named .memory-card-->
-<!--each card has 2 imgs one img/js-badge.svg which is back of card and another one for the other side-->
-    <div class=".memoryCard"> <img alt="Back side of card" src="img/js-badge.svg"> <img alt="angularIcon" src="img/angular.svg"></div>
-    <div class=".memoryCard"><img alt="Back side of card" src="img/js-badge.svg"> <img alt="aurelia" src="img/aurelia.svg"></div>
-    <div class=".memoryCard"><img alt="Back side of card" src="img/js-badge.svg"><img alt="backbone" src="img/backbone.svg"></div>
-    <div class=".memoryCard"><img alt="Back side of card" src="img/js-badge.svg"><img alt="ember" src="img/ember.svg"></div>
-    <div class=".memoryCard"><img alt="Back side of card" src="img/js-badge.svg"><img alt="react" src="img/react.svg"></div>
-    <div class=".memoryCard"><img alt="Back side of card" src="img/js-badge.svg"><img alt="vue" src="img/vue.svg"></div>
-    <div class=".memoryCard"> <img alt="Back side of card" src="img/js-badge.svg"> <img alt="angularIcon" src="img/angular.svg"></div>
-    <div class=".memoryCard"><img alt="Back side of card" src="img/js-badge.svg"> <img alt="aurelia" src="img/aurelia.svg"></div>
-    <div class=".memoryCard"><img alt="Back side of card" src="img/js-badge.svg"><img alt="backbone" src="img/backbone.svg"></div>
-    <div class=".memoryCard"><img alt="Back side of card" src="img/js-badge.svg"><img alt="ember" src="img/ember.svg"></div>
-    <div class=".memoryCard"><img alt="Back side of card" src="img/js-badge.svg"><img alt="react" src="img/react.svg"></div>
-    <div class=".memoryCard"><img alt="Back side of card" src="img/js-badge.svg"><img alt="vue" src="img/vue.svg"></div>
+<section class="memory-game">
+    <div class="memory-card" data-name="react">
+        <img class="front-face" src="img/react.svg" alt="React">
+        <img class="back-face" src="img/js-badge.svg" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-name="react">
+        <img class="front-face" src="img/react.svg" alt="React">
+        <img class="back-face" src="img/js-badge.svg" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-name="angular">
+        <img class="front-face" src="img/angular.svg" alt="Angular">
+        <img class="back-face" src="img/js-badge.svg" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-name="angular">
+        <img class="front-face" src="img/angular.svg" alt="Angular">
+        <img class="back-face" src="img/js-badge.svg" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-name="ember">
+        <img class="front-face" src="img/ember.svg" alt="Ember">
+        <img class="back-face" src="img/js-badge.svg" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-name="ember">
+        <img class="front-face" src="img/ember.svg" alt="Ember">
+        <img class="back-face" src="img/js-badge.svg" alt="Memory Card">
+    </div>
+    <div class="memory-card" data-name="vue">
+        <img class="front-face" src="img/vue.svg" alt="Vue">
+        <img class="back-face" src="img/js-badge.svg" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-name="vue">
+        <img class="front-face" src="img/vue.svg" alt="Vue">
+        <img class="back-face" src="img/js-badge.svg" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-name="backbone">
+        <img class="front-face" src="img/backbone.svg" alt="Backbone">
+        <img class="back-face" src="img/js-badge.svg" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-name="backbone">
+        <img class="front-face" src="img/backbone.svg" alt="Backbone">
+        <img class="back-face" src="img/js-badge.svg" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-name="aurelia">
+        <img class="front-face" src="img/aurelia.svg" alt="Aurelia">
+        <img class="back-face" src="img/js-badge.svg" alt="Memory Card">
+    </div>
+
+    <div class="memory-card" data-name="aurelia">
+        <img class="front-face" src="img/aurelia.svg" alt="Aurelia">
+        <img class="back-face" src="img/js-badge.svg" alt="Memory Card">
+    </div>
 </section>
 
-    <script src="app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
