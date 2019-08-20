@@ -1,9 +1,11 @@
 body{
     margin:0;
     background-color:#03356F;
+    display: flex
 }
 
 .\.memoryCard{
     /*includes padding and border values into elements total width and height*/
     box-sizing: border-box;
+    margin: auto
 }
