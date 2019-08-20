@@ -1,17 +1,27 @@
+//Flip card logic.
 //returns all elements in the document that matches a specified CSS selector in an array
 const cards = document.querySelectorAll('.memory-card');
+//loop through all cards and attach an event listener and call flipCard function every time click card
+cards.forEach(card => card.addEventListener('click', flipCard));
 
-
+//using let so has block level scoping and can change the value reference
 let hasFlippedCard = false;
+//player clicks second card, lockBoard set to true and the condition if (lockBoard) return;
+// will prevent any card flipping before the cards are hidden or match:
 let lockBoard = false;
 let firstCard, secondCard;
 
+
 function flipCard() {
+    // If lockBoard= false exit code path
     if (lockBoard) return;
+    //this variable represents the card that was clicked
     if (this === firstCard) return;
 
+    //classList Property returns the class name(s) of an element
     this.classList.add('flip');
 
+    //If hasFlippedCard= true
     if (!hasFlippedCard) {
         hasFlippedCard = true;
         firstCard = this;
@@ -59,4 +69,3 @@ function resetBoard() {
     });
 })();
 
-cards.forEach(card => card.addEventListener('click', flipCard));
