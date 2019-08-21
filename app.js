@@ -6,7 +6,7 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
-var score = 0;
+var scoreNum = 0;
 var cardsOpen=[];
 
 
@@ -37,24 +37,21 @@ function checkForMatch() {
     let isMatch = firstCard.dataset.name === secondCard.dataset.name;
     if (isMatch===true){
         disableCards();
-        score++;
-            var textnode = document.createTextNode(score);
-            var node = document.createElement("div");
-            node.appendChild(textnode);
-            document.getElementById("score").appendChild(node);
-       if (score===6){
-           alert("you won!");
-       }
+        score();
     }
     unflipCards();
 }
 
+function score() {
+    scoreNum=++scoreNum;
+    document.getElementById("score").innerText=scoreNum;
+}
 
 function disableCards() {
     cardsOpen.push(firstCard);
     cardsOpen.push(secondCard);
-    firstCard.removeEventListener('click', flipCard);
-    secondCard.removeEventListener('click', flipCard);
+    firstCard.removeEventListener('click',flipCard);
+    secondCard.removeEventListener('click',flipCard);
     resetBoard();
 }
 
@@ -75,14 +72,15 @@ function resetBoard() {
 }
 
 function redo() {
-    for (var i= cardsOpen.length-1; i>=0; i--) {
-        cardsOpen[i].classList.remove("flip");
-    }
     hasFlippedCard = false;
     lockBoard = false;
     firstCard = null;
     secondCard = null;
+    for (var i = cardsOpen.length - 1; i >= 0; i--) {
+        cardsOpen[i].classList.remove("flip");
+    }
 }
+
 
 (function shuffle() {
     cards.forEach(card => {
