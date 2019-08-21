@@ -56,7 +56,9 @@ function checkForMatch() {
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
-
+    var cardsOpen=[];
+    cardsOpen.push(firstCard);
+    cardsOpen.push(secondCard);
     resetBoard();
 }
 
@@ -74,6 +76,17 @@ function resetBoard() {
     lockBoard = false;
     firstCard = null;
     secondCard = null;
+}
+
+function redo() {
+    hasFlippedCard = false;
+    lockBoard = false;
+    firstCard = null;
+    secondCard = null;
+    for (let i=12; i!==0; i--) {
+        cardsOpen(i).classList.remove("flip");
+    }
+
 }
 
 (function shuffle() {
