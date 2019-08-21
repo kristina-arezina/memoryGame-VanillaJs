@@ -11,6 +11,11 @@ body {
     background: #060AB2;
 }
 
+#score{
+    color:whitesmoke;
+    font-size: 25px;
+}
+
 .memory-game {
     width: 640px;
     height: 640px;

@@ -10,6 +10,7 @@ let hasFlippedCard = false;
 // will prevent any card flipping before the cards are hidden or match:
 let lockBoard = false;
 let firstCard, secondCard;
+var score = 0;
 
 
 function flipCard() {
@@ -36,8 +37,21 @@ function flipCard() {
 
 function checkForMatch() {
     let isMatch = firstCard.dataset.name === secondCard.dataset.name;
-    isMatch ? disableCards() : unflipCards();
+    //if isMatch=true then disableCards if equals false unflipCards
+    if (isMatch){
+        disableCards();
+            score++;
+            var textnode = document.createTextNode(score);
+            var node = document.createElement("div");
+            node.appendChild(textnode);
+            document.getElementById("score").appendChild(node);
+       if (score===6){
+           alert("you won!");
+       }
+    }
+    unflipCards();
 }
+
 
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
@@ -52,7 +66,7 @@ function unflipCards() {
         secondCard.classList.remove('flip');
 
         resetBoard();
-    }, 1500);
+    }, 500);
 }
 
 function resetBoard() {
