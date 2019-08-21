@@ -11,6 +11,7 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 var score = 0;
+var cardsOpen=[];
 
 
 function flipCard() {
@@ -56,7 +57,6 @@ function checkForMatch() {
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
-    var cardsOpen=[];
     cardsOpen.push(firstCard);
     cardsOpen.push(secondCard);
     resetBoard();
@@ -83,8 +83,8 @@ function redo() {
     lockBoard = false;
     firstCard = null;
     secondCard = null;
-    for (let i=12; i!==0; i--) {
-        cardsOpen(i).classList.remove("flip");
+    for (var i= cardsOpen.length-1; i>=0; i--) {
+        cardsOpen[i].classList.remove("flip");
     }
 
 }
