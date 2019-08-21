@@ -1,13 +1,9 @@
 //Flip card logic.
-//returns all elements in the document that matches a specified CSS selector in an array
 const cards = document.querySelectorAll('.memory-card');
-//loop through all cards and attach an event listener and call flipCard function every time click card
 cards.forEach(card => card.addEventListener('click', flipCard));
 
-//using let so has block level scoping and can change the value reference
+
 let hasFlippedCard = false;
-//player clicks second card, lockBoard set to true and the condition if (lockBoard) return;
-// will prevent any card flipping before the cards are hidden or match:
 let lockBoard = false;
 let firstCard, secondCard;
 var score = 0;
@@ -15,15 +11,16 @@ var cardsOpen=[];
 
 
 function flipCard() {
-    // If lockBoard= false exit code path
-    if (lockBoard) return;
-    //this variable represents the card that was clicked
-    if (this === firstCard) return;
+    if (lockBoard===true) {
+        return;
+    } else if (this === firstCard) {
+        return;
+    }else {
+        this.classList.add('flip');
+    }
 
-    //classList Property returns the class name(s) of an element
-    this.classList.add('flip');
 
-    //If hasFlippedCard= true
+    //If hasFlippedCard= false
     if (!hasFlippedCard) {
         hasFlippedCard = true;
         firstCard = this;
@@ -38,10 +35,9 @@ function flipCard() {
 
 function checkForMatch() {
     let isMatch = firstCard.dataset.name === secondCard.dataset.name;
-    //if isMatch=true then disableCards if equals false unflipCards
-    if (isMatch){
+    if (isMatch===true){
         disableCards();
-            score++;
+        score++;
             var textnode = document.createTextNode(score);
             var node = document.createElement("div");
             node.appendChild(textnode);
@@ -55,10 +51,10 @@ function checkForMatch() {
 
 
 function disableCards() {
-    firstCard.removeEventListener('click', flipCard);
-    secondCard.removeEventListener('click', flipCard);
     cardsOpen.push(firstCard);
     cardsOpen.push(secondCard);
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard);
     resetBoard();
 }
 
@@ -79,14 +75,13 @@ function resetBoard() {
 }
 
 function redo() {
+    for (var i= cardsOpen.length-1; i>=0; i--) {
+        cardsOpen[i].classList.remove("flip");
+    }
     hasFlippedCard = false;
     lockBoard = false;
     firstCard = null;
     secondCard = null;
-    for (var i= cardsOpen.length-1; i>=0; i--) {
-        cardsOpen[i].classList.remove("flip");
-    }
-
 }
 
 (function shuffle() {
