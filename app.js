@@ -7,6 +7,7 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 var scoreNum = 0;
+var message = "Your Score Is: ";
 var cardsOpen=[];
 
 
@@ -44,7 +45,7 @@ function checkForMatch() {
 
 function score() {
     scoreNum=++scoreNum;
-    document.getElementById("score").innerText=scoreNum;
+    document.getElementById("score").innerText= message + scoreNum;
 }
 
 function disableCards() {
@@ -79,7 +80,7 @@ function redo() {
         cards.forEach(card => card.addEventListener('click', flipCard));
     }
     scoreNum = 0;
-    document.getElementById("score").innerText=scoreNum;
+    document.getElementById("score").innerText= message + scoreNum;
 }
 
 function newGame(){
