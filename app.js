@@ -72,10 +72,7 @@ function resetBoard() {
 }
 
 function redo() {
-    hasFlippedCard = false;
-    lockBoard = false;
-    firstCard = null;
-    secondCard = null;
+   resetBoard();
     for (var i = cardsOpen.length - 1; i >= 0; i--) {
         cardsOpen[i].classList.remove("flip");
         const cards = document.querySelectorAll('.memory-card');
@@ -85,6 +82,15 @@ function redo() {
     document.getElementById("score").innerText=scoreNum;
 }
 
+function newGame(){
+    (function shuffle() {
+        cards.forEach(card => {
+            let ramdomPos = Math.ceil(Math.random() * 12);
+            card.style.order = ramdomPos;
+        });
+    })();
+    redo()
+}
 
 (function shuffle() {
     cards.forEach(card => {

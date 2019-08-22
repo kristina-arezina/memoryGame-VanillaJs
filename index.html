@@ -6,11 +6,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div id="message">Your Score Is:</div>
-<div id="score"></div>
-<section class="memory-game">
 
-    <button onclick="redo()" id="redo">Redo</button>
+<div class="extra">
+<div id="message">Your Score Is:</div>
+<div id="score">0</div>
+<button onclick="newGame()">New Game</button>
+<button onclick="redo()" id="redo">Redo</button>
+</div>
+
+
+<section class="memory-game">
     <div class="memory-card" data-name="react">
         <img class="front-face" src="img/react.svg" alt="React">
         <img class="back-face" src="img/js-badge.svg" alt="Memory Card">
