@@ -28,6 +28,7 @@ body {
     flex-wrap: wrap;
     /*Gives 3D effect*/
     perspective: 1000px;
+    margin-left:calc(20% - 120px);
 }
 
 /*styles for each card div/box*/

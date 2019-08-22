@@ -7,8 +7,10 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 var scoreNum = 0;
-var message = "Your Score Is: ";
+var messageScore = "Your Score Is: ";
+var messageAttempts="Attempts: ";
 var cardsOpen=[];
+var attemptsNum=0;
 
 
 function flipCard() {
@@ -19,7 +21,6 @@ function flipCard() {
     }else {
         this.classList.add('flip');
     }
-
 
     //If hasFlippedCard= false
     if (!hasFlippedCard) {
@@ -41,11 +42,17 @@ function checkForMatch() {
         score();
     }
     unflipCards();
+    attempts();
 }
 
 function score() {
     scoreNum=++scoreNum;
-    document.getElementById("score").innerText= message + scoreNum;
+    document.getElementById("score").innerText= messageScore + scoreNum;
+}
+
+function attempts(){
+    ++attemptsNum;
+    document.getElementById("attempts").innerText= messageAttempts+ attemptsNum;
 }
 
 function disableCards() {
@@ -80,7 +87,10 @@ function redo() {
         cards.forEach(card => card.addEventListener('click', flipCard));
     }
     scoreNum = 0;
-    document.getElementById("score").innerText= message + scoreNum;
+    document.getElementById("score").innerText= messageScore + scoreNum;
+
+    var attemptsNum=0;
+    document.getElementById("attempts").innerText= messageAttempts+ attemptsNum;
 }
 
 function newGame(){
