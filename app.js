@@ -48,6 +48,9 @@ function checkForMatch() {
 function score() {
     scoreNum=++scoreNum;
     document.getElementById("score").innerText= messageScore + scoreNum;
+    if (scoreNum===6){
+        document.getElementById("message").innerText= "Congratulations you won!";
+    }
 }
 
 function attempts(){
@@ -67,7 +70,6 @@ function unflipCards() {
     setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
-
         resetBoard();
     }, 500);
 }
@@ -91,6 +93,8 @@ function redo() {
 
    attemptsNum=0;
     document.getElementById("attempts").innerText= messageAttempts+ attemptsNum;
+
+    document.getElementById("message").innerText="";
 }
 
 function newGame(){
