@@ -89,7 +89,7 @@ function redo() {
     scoreNum = 0;
     document.getElementById("score").innerText= messageScore + scoreNum;
 
-    var attemptsNum=0;
+   attemptsNum=0;
     document.getElementById("attempts").innerText= messageAttempts+ attemptsNum;
 }
 
