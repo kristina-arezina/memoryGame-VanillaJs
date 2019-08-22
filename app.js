@@ -82,6 +82,7 @@ function redo() {
         cards.forEach(card => card.addEventListener('click', flipCard));
     }
     scoreNum = 0;
+    document.getElementById("score").innerText=scoreNum;
 }
 
 
