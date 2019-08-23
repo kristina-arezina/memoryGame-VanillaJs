@@ -12,11 +12,11 @@ Structure:
 
 
 Styles.css notes:
--Viewport: user's visible area of a web page. Varies with the device, and will be smaller on a mobile phone than 
+- Viewport: user's visible area of a web page. Varies with the device, and will be smaller on a mobile phone than 
 on a computer screen
--Vh and vw: Relative to 1% of the width or height of the viewport
--Display property specifies the display behavior (the type of rendering box) of an element
--CSS Flexbox Layout Module: first define a flex container(memory-game), flex-wrap: wrap specifies that the flex items 
+- Vh and vw: Relative to 1% of the width or height of the viewport
+- Display property specifies the display behavior (the type of rendering box) of an element
+- CSS Flexbox Layout Module: first define a flex container(memory-game), flex-wrap: wrap specifies that the flex items 
 will wrap if necessary
 
 JS Notes:
@@ -28,5 +28,8 @@ Making card flip:
 - Add class flip to elements: select all memory-card elements with document.querySelectorAll and them loop though 
 all of them and attach an event listener to them and call flipCard function when pressed
 - this variable = card that was clicked
-- 
+
+What I did:
+- copied code from: https://marina-ferreira.github.io/memory-game/ using inspect tools, under sources
+- added score feature, attempts feature, new game button, redo button, and message feature
 
