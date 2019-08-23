@@ -8,11 +8,11 @@
 body {
     height: 100vh;
     display: flex;
-    background: #060AB2;
+    background: #53b061;
 }
 
 #score{
-    color:whitesmoke;
+    color:black;
     font-size: 25px;
 }
 
@@ -70,7 +70,7 @@ body {
     position: absolute;
     backface-visibility: hidden;
     border-radius: 5px;
-    background: #1C7CCC;
+    background: #e3e024;
 }
 
 .front-face {
@@ -78,7 +78,7 @@ body {
 }
 
 .extra{
-    color:white;
+    color:black;
     font-size:25px;
     padding-top:calc(25% - 30px);
     padding-left:40px;
@@ -86,10 +86,10 @@ body {
 }
 
 .button{
-    background-color: #30b9e3;
+    background-color: #e3e024;
     border-width:1px;
     border-color: grey;
-    color: white;
+    color: black;
     padding: 15px 32px;
     text-decoration: none;
     display: inline-block;
@@ -100,7 +100,7 @@ body {
 
 button:hover {
     cursor: pointer;
-    background-color: #0aa1cf;
+    background-color: #ffffff;
 }
 
 button:focus{
