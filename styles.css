@@ -12,7 +12,6 @@ body {
 }
 
 #score{
-    color:black;
     font-size: 25px;
 }
 
@@ -86,10 +85,10 @@ body {
 }
 
 .button{
-    background-color: #e3e024;
+    background-color: #222222;
     border-width:1px;
     border-color: grey;
-    color: black;
+    color: white;
     padding: 15px 32px;
     text-decoration: none;
     display: inline-block;
@@ -101,6 +100,7 @@ body {
 button:hover {
     cursor: pointer;
     background-color: #ffffff;
+    color: black;
 }
 
 button:focus{

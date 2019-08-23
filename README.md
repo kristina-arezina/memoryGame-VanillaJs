@@ -5,7 +5,7 @@ it: https://www.freecodecamp.org/news/vanilla-javascript-tutorial-build-a-memory
 index.html notes:
 Structure:
 - All elements (all the cards) in the body are in the section class memeory-game
-- Section div means: content inside is grouped, relates to a single theme
+- Section div: content inside is grouped, relates to a single theme
 
 - Each card has its own div with a class of memory-card and data-name of the picture on the card
 - Each card in that div has a picture on the front(with the class front-face) and back(with class back-face)
@@ -32,4 +32,5 @@ all of them and attach an event listener to them and call flipCard function when
 What I did:
 - copied code from: https://marina-ferreira.github.io/memory-game/ using inspect tools, under sources
 - added score feature, attempts feature, new game button, redo button, and message feature
+- changes the images to animals and changed the css to change the style
 
