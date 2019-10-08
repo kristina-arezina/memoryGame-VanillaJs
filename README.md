@@ -32,5 +32,5 @@ all of them and attach an event listener to them and call flipCard function when
 What I did:
 - copied code from: https://marina-ferreira.github.io/memory-game/ using inspect tools, under sources
 - added score feature, attempts feature, new game button, redo button, and message feature
-- changes the images to animals and changed the css to change the style
+- changed the images to animals and changed the css to change the style
 
